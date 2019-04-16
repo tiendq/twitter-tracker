@@ -1,0 +1,15 @@
+# OS or Editor folders
+.DS_Store
+
+# Folders to ignore
+build
+coverage
+dist
+node_modules
+
+# Files to ignore
+*.css.map
+*.js.map
+.env
+*.log
+npm-debug.log
