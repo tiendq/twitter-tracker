@@ -1,17 +1,17 @@
 /* eslint-disable global-require, import/no-dynamic-require */
 // load .env in local development
 if ('development' === process.env.NODE_ENV)
-  require('dotenv').config({ silent: true });
+  require('dotenv-safe').config({ silent: true });
 
-const processType = process.env.PROCESS_TYPE;
+const type = process.env.PROCESS_TYPE;
 
-let config;
+let config = null;
 
 try {
-  config = require(`./${processType}`);
+  config = require(`./${type}`);
 } catch (x) {
-  if ('MODULE_NOT_FOUND' === ex.code)
-    throw new Error(`No config for process type: ${processType}`);
+  if ('MODULE_NOT_FOUND' === x.code)
+    throw new Error(`No config for process type: ${type}`);
 
   throw x;
 }
