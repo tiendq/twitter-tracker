@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 const logger = require('winston');
+
 const type = process.env.PROCESS_TYPE;
 
 logger.info(`Starting '${type}' process...`, { pid: process.pid });

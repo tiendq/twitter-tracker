@@ -1,9 +1,13 @@
 /* eslint-disable global-require, import/no-dynamic-require */
-// load .env in local development
-if ('development' === process.env.NODE_ENV)
-  require('dotenv-safe').config({ silent: true });
-
 const type = process.env.PROCESS_TYPE;
+
+const dotenv = require('dotenv-safe');
+let { parsed } = dotenv.config({ silent: true });
+
+if ('development' === process.env.NODE_ENV) {
+  console.log('Environment variables:');
+  console.log(parsed);
+}
 
 let config = null;
 

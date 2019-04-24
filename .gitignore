@@ -10,6 +10,6 @@ node_modules
 # Files to ignore
 *.css.map
 *.js.map
-.env
 *.log
+.env
 npm-debug.log
