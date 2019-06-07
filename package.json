@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start:web": "PROCESS_TYPE=web nodemon index.js",
-    "start:stream-worker": "PROCESS_TYPE=twitter-stream-worker nodemon index.js",
+    "start:twitter-worker": "PROCESS_TYPE=twitter-stream-worker DEBUG=twitter nodemon index.js",
     "start:preprocessor-worker": "PROCESS_TYPE=social-preprocessor-worker nodemon index.js"
   },
   "dependencies": {
@@ -15,5 +15,8 @@
     "joi": "^14.3.1",
     "twitter": "^1.7.1",
     "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "debug": "^4.1.1"
   }
 }

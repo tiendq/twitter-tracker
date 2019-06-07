@@ -12,11 +12,11 @@ let config = null;
 
 try {
   config = require(`./${type}`);
-} catch (x) {
-  if ('MODULE_NOT_FOUND' === x.code)
+} catch (error) {
+  if ('MODULE_NOT_FOUND' === error.code)
     throw new Error(`No configuration for process type: ${type}`);
 
-  throw x;
+  throw error;
 }
 
 module.exports = config;

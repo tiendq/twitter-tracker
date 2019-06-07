@@ -1,4 +1,3 @@
-/* eslint-disable global-require */
 const logger = require('winston');
 
 const type = process.env.PROCESS_TYPE;
