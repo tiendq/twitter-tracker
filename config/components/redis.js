@@ -3,9 +3,7 @@ const joi = require('joi');
 let envVarsSchema = joi.object({
   REDIS_URI: joi.string()
     .uri({ scheme: 'redis' })
-    .required(),
-  REDIS_DATA_RETENTION_IN_MS: joi.number()
-    .default(86400000)
+    .required()
 }).unknown().required();
 
 let {
@@ -18,8 +16,7 @@ if (error)
 
 let config = {
   redis: {
-    uri: envVars.REDIS_URI,
-    dataRetention: envVars.REDIS_DATA_RETENTION_IN_MS
+    uri: envVars.REDIS_URI
   }
 }
 

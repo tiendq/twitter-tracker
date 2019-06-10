@@ -1,4 +1,3 @@
-const joi = require('joi');
 const logger = require('winston');
 const debug = require('debug')('zeromq');
 const zmq = require('zeromq');
